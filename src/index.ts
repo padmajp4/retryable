@@ -24,7 +24,7 @@ export class RetryError extends Error {
 function getDelay(delay: number, attempt: number, backoff: BackoffStrategy): number {
   switch (backoff) {
     case 'linear':      return delay * attempt
-    case 'exponential': return delay * Math.pow(2, attempt - 1)
+    case 'exponential': return Math.min(delay * Math.pow(2, attempt - 1), 30_000)
     default:            return delay
   }
 }
