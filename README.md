@@ -95,6 +95,10 @@ try {
 }
 ```
 
+## Notes
+
+- Passing `attempts: Infinity` or `delay: Infinity` will cause the retry loop to hang indefinitely. Always use finite values in production.
+
 ## License
 
 MIT
