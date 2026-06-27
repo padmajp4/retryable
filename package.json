@@ -1,6 +1,6 @@
 {
   "name": "@padmaj/retryable",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Retry an async function with configurable attempts, delay, and backoff strategy.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
