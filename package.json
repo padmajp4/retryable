@@ -1,0 +1,35 @@
+{
+  "name": "@padmaj/retryable",
+  "version": "1.0.0",
+  "description": "Retry an async function with configurable attempts, delay, and backoff strategy.",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": ["dist"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/padmajp4/retryable.git"
+  },
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "keywords": ["retry", "async", "backoff", "exponential", "fetch", "resilience"],
+  "author": "Padmaj P Kumar",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^26.0.1",
+    "tsup": "^8.5.1",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.9"
+  }
+}
